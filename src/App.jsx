@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react'
 
-const WORDS = ['spectacular', 'brilliant', 'fantastic', 'marvelous', 'electric', 'legendary', 'radiant', 'stellar']
+const JOKES = [
+  "Why don't scientists trust atoms? Because they make up everything.",
+  "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+  "Why do cows wear bells? Because their horns don't work.",
+  "I'm reading a book about anti-gravity. It's impossible to put down.",
+  "Did you hear about the claustrophobic astronaut? He just needed a little space.",
+  "Why did the scarecrow win an award? He was outstanding in his field.",
+  "I used to hate facial hair, but then it grew on me.",
+  "What do you call cheese that isn't yours? Nacho cheese.",
+]
 
 export default function App() {
   const [toast, setToast] = useState(null)
@@ -12,8 +21,8 @@ export default function App() {
   }, [toast])
 
   const handleClick = () => {
-    const word = WORDS[Math.floor(Math.random() * WORDS.length)]
-    setToast({ time: Date.now(), word })
+    const joke = JOKES[Math.floor(Math.random() * JOKES.length)]
+    setToast({ time: Date.now(), joke })
   }
 
   return (
@@ -25,7 +34,7 @@ export default function App() {
       </button>
       {toast && (
         <div key={toast.time} className="toast" role="status" aria-live="polite">
-          👋 Hello from Ace 2.0! This works! — {toast.word} — {new Date(toast.time).toLocaleString()}
+          👋 {toast.joke} — {new Date(toast.time).toLocaleString()}
         </div>
       )}
     </main>
