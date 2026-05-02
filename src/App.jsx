@@ -18,7 +18,7 @@ export default function App() {
       </button>
       {toast && (
         <div key={toast} className="toast" role="status" aria-live="polite">
-          👋 Hello from Ace 2.0!  This works!
+          👋 Hello from Ace 2.0! This works! — {new Date(toast).toLocaleString()}
         </div>
       )}
     </main>
