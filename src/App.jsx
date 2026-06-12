@@ -34,7 +34,7 @@ export default function App() {
       </button>
       {toast && (
         <div key={toast.time} className="toast" role="status" aria-live="polite">
-          👋 {toast.joke} — {new Date(toast.time).toLocaleString()}
+          👋 {toast.joke}
         </div>
       )}
     </main>
