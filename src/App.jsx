@@ -22,7 +22,11 @@ export default function App() {
 
   const handleClick = () => {
     const joke = JOKES[Math.floor(Math.random() * JOKES.length)]
-    setToast({ time: Date.now(), joke })
+    setToast({ time: Date.now(), text: joke })
+  }
+
+  const handleTest = () => {
+    setToast({ time: Date.now(), text: 'Test' })
   }
 
   return (
@@ -32,9 +36,12 @@ export default function App() {
       <button className="cta" onClick={handleClick}>
         Click Me!
       </button>
+      <button className="cta" onClick={handleTest}>
+        Test
+      </button>
       {toast && (
         <div key={toast.time} className="toast" role="status" aria-live="polite">
-          👋 {toast.joke}
+          👋 {toast.text}
         </div>
       )}
     </main>
