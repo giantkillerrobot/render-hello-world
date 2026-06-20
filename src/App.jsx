@@ -25,19 +25,12 @@ export default function App() {
     setToast({ time: Date.now(), text: joke })
   }
 
-  const handleTest = () => {
-    setToast({ time: Date.now(), text: 'Test' })
-  }
-
   return (
     <main className="page">
       <img src="/ace-logo.png" alt="Ace 2.0" className="logo" />
       <h1 className="headline">Hello World</h1>
       <button className="cta" onClick={handleClick}>
         Click Me!
-      </button>
-      <button className="cta" onClick={handleTest}>
-        Test
       </button>
       {toast && (
         <div key={toast.time} className="toast" role="status" aria-live="polite">

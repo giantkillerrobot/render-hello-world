@@ -23,7 +23,7 @@ Single-page React 19 + Vite 6 app deployed as a **Render Static Site** (no serve
 - `src/index.css` — global styles, imported by `main.jsx`
 - `public/ace-logo.png` — static asset served at `/ace-logo.png` at runtime
 
-`render.yaml` defines the Render Blueprint: `npm install && npm run build` produces `./dist`, which Render CDN-serves. The `/* → /index.html` rewrite is an SPA fallback (safe to leave in place if routing is added later).
+`render.yaml` defines the Render Blueprint: `npm install && npm run build` produces `./dist`, which Render CDN-serves. It also sets an `X-Frame-Options: SAMEORIGIN` header on all paths and a `/* → /index.html` rewrite (SPA fallback, safe to leave in place if routing is added later).
 
 ## Deployment
 
