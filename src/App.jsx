@@ -28,7 +28,7 @@ export default function App() {
   return (
     <main className="page">
       <img src="/ace-logo.png" alt="Ace 2.0" className="logo" />
-      <h1 className="headline">Hello World V2</h1>
+      <h1 className="headline">Hello World V3</h1>
       <button className="cta" onClick={handleClick}>
         Click Me!
       </button>
